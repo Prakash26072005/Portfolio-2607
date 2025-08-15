@@ -1,0 +1,17 @@
+.success-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.success-container h1 {
+  color: green;
+}
+
+.success-container button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
