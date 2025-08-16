@@ -16,15 +16,15 @@ export default async function handler(req, res) {
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.MAIL_USER, // from Vercel env vars
-        pass: process.env.MAIL_PASS, // Gmail app password
+        user: process.env.EMAIL_USER, // Gmail address
+        pass: process.env.EMAIL_PASS, // Gmail app password
       },
     });
 
     // ✅ Send email
     await transporter.sendMail({
-      from: email,
-      to: process.env.MAIL_USER,
+      from: email, // visitor ka email
+      to: process.env.TO_EMAIL, // tumhara Gmail (receiver)
       subject: `Portfolio Contact - ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
