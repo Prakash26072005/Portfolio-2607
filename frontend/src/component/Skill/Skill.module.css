@@ -1,9 +1,9 @@
 .body {
 
   padding: 40px 20px; 
-    background-size: cover;       /* fill container */
-    background-position: center;  /* center image */
-    background-repeat: no-repeat; /* no repeating */
+    background-size: cover;     
+    background-position: center;
+    background-repeat: no-repeat; 
 }
 
 .Skills {

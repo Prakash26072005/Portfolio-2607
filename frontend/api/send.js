@@ -12,19 +12,18 @@ export default async function handler(req, res) {
   }
 
   try {
-    // ✅ Configure transporter
+
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER, // Gmail address
-        pass: process.env.EMAIL_PASS, // Gmail app password
+        user: process.env.EMAIL_USER, 
+        pass: process.env.EMAIL_PASS, 
       },
     });
 
-    // ✅ Send email
     await transporter.sendMail({
-      from: email, // visitor ka email
-      to: process.env.TO_EMAIL, // tumhara Gmail (receiver)
+      from: email, 
+      to: process.env.TO_EMAIL,
       subject: `Portfolio Contact - ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
