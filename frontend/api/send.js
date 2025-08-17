@@ -1,3 +1,7 @@
+/* eslint-disable no-undef */
+/**
+ * @type {NodeJS.ProcessEnv}
+ */
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
@@ -39,3 +43,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ success: false, message: "Failed to send message" });
   }
 }
+
